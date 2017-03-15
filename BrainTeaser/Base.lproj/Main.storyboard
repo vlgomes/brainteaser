@@ -28,29 +28,46 @@
                                     <constraint firstAttribute="height" constant="188" id="Y8b-WQ-cmr"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vFq-kH-L4u">
-                                <rect key="frame" x="61" y="251" width="253" height="35"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vFq-kH-L4u" customClass="CustomTextField" customModule="BrainTeaser" customModuleProvider="target">
+                                <rect key="frame" x="61" y="251" width="253" height="40"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="253" id="5MO-nX-C92"/>
-                                    <constraint firstAttribute="height" constant="35" id="DfP-WT-FmY"/>
+                                    <constraint firstAttribute="height" constant="40" id="DfP-WT-FmY"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXk-QM-6UZ">
-                                <rect key="frame" x="168" y="391" width="38" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cXk-QM-6UZ" customClass="CustomButton" customModule="BrainTeaser" customModuleProvider="target">
+                                <rect key="frame" x="87" y="391" width="200" height="35"/>
+                                <color key="backgroundColor" red="0.066666666666666666" green="0.5725490196078431" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="8Qn-A6-uBc"/>
+                                    <constraint firstAttribute="width" constant="200" id="f8e-7Y-v9A"/>
+                                </constraints>
                                 <state key="normal" title="Login"/>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aPy-gd-2qA">
-                                <rect key="frame" x="61" y="321" width="253" height="35"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aPy-gd-2qA" customClass="CustomTextField" customModule="BrainTeaser" customModuleProvider="target">
+                                <rect key="frame" x="61" y="316" width="253" height="40"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="Nbs-BH-Y9w"/>
+                                    <constraint firstAttribute="height" constant="40" id="Nbs-BH-Y9w"/>
                                     <constraint firstAttribute="width" constant="253" id="aQy-8k-oyX"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="inset">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -62,7 +79,7 @@
                             <constraint firstItem="cXk-QM-6UZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FQR-UT-SEJ"/>
                             <constraint firstItem="cXk-QM-6UZ" firstAttribute="top" secondItem="aPy-gd-2qA" secondAttribute="bottom" constant="35" id="JHi-NS-KmZ"/>
                             <constraint firstItem="mwV-c0-8Fq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QEE-Gh-5kh"/>
-                            <constraint firstItem="aPy-gd-2qA" firstAttribute="top" secondItem="vFq-kH-L4u" secondAttribute="bottom" constant="35" id="Yef-Cz-IC6"/>
+                            <constraint firstItem="aPy-gd-2qA" firstAttribute="top" secondItem="vFq-kH-L4u" secondAttribute="bottom" constant="25" id="Yef-Cz-IC6"/>
                         </constraints>
                     </view>
                 </viewController>
