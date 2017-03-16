@@ -121,6 +121,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="yesPressed:" destination="JjT-DB-m4Y" eventType="touchUpInside" id="Qmd-xL-nRS"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTw-xR-rUe" customClass="CustomButton" customModule="BrainTeaser" customModuleProvider="target">
                                 <rect key="frame" x="16" y="612" width="105" height="35"/>
@@ -133,9 +136,12 @@
                                 <state key="normal" title="NO">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="noPressed:" destination="JjT-DB-m4Y" eventType="touchUpInside" id="CfQ-iD-HuG"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Remember this image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8V-eB-Cij">
-                                <rect key="frame" x="16" y="76" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember this image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8V-eB-Cij">
+                                <rect key="frame" x="16" y="100" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Bzz-jw-pNg"/>
                                     <constraint firstAttribute="width" constant="343" id="DG8-cU-wGq"/>
@@ -149,12 +155,17 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="CnK-Tz-O4S" secondAttribute="trailing" id="5tx-Zc-6vt"/>
                             <constraint firstItem="t8V-eB-Cij" firstAttribute="centerX" secondItem="tWS-eF-JeY" secondAttribute="centerX" id="8om-fn-Ssh"/>
-                            <constraint firstItem="t8V-eB-Cij" firstAttribute="top" secondItem="Wp8-9c-Y42" secondAttribute="bottom" constant="50" id="CNM-bj-mbG"/>
+                            <constraint firstItem="t8V-eB-Cij" firstAttribute="top" secondItem="Wp8-9c-Y42" secondAttribute="bottom" constant="80" id="CNM-bj-mbG"/>
                             <constraint firstItem="lPn-R7-get" firstAttribute="top" secondItem="lTw-xR-rUe" secondAttribute="bottom" constant="20" id="F3C-0e-zu2"/>
                             <constraint firstItem="lTw-xR-rUe" firstAttribute="leading" secondItem="tWS-eF-JeY" secondAttribute="leadingMargin" id="Ilo-FZ-j5T"/>
                             <constraint firstItem="lPn-R7-get" firstAttribute="top" secondItem="CnK-Tz-O4S" secondAttribute="bottom" constant="20" id="ucP-cb-IXl"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="noBtn" destination="lTw-xR-rUe" id="ME9-Su-3lC"/>
+                        <outlet property="titleLbl" destination="t8V-eB-Cij" id="kgy-sF-i3f"/>
+                        <outlet property="yesBtn" destination="CnK-Tz-O4S" id="kej-9S-fVo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U92-LB-rlw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
