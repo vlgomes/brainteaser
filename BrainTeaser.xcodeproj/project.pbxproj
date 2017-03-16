@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2783F15B1E7AEF0100DEAC05 /* GameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783F15A1E7AEF0100DEAC05 /* GameVC.swift */; };
+		2783F15D1E7AF2E300DEAC05 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783F15C1E7AF2E300DEAC05 /* Card.swift */; };
+		2783F15F1E7AF30000DEAC05 /* Card.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2783F15E1E7AF30000DEAC05 /* Card.xib */; };
 		279C7CE21E7962EA001C25FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279C7CE11E7962EA001C25FE /* AppDelegate.swift */; };
 		279C7CE41E7962EA001C25FE /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279C7CE31E7962EA001C25FE /* LoginVC.swift */; };
 		279C7CE71E7962EA001C25FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279C7CE51E7962EA001C25FE /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2783F15A1E7AEF0100DEAC05 /* GameVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameVC.swift; sourceTree = "<group>"; };
+		2783F15C1E7AF2E300DEAC05 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		2783F15E1E7AF30000DEAC05 /* Card.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Card.xib; sourceTree = "<group>"; };
 		279C7CDE1E7962EA001C25FE /* BrainTeaser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainTeaser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279C7CE11E7962EA001C25FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		279C7CE31E7962EA001C25FE /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -86,6 +92,8 @@
 			children = (
 				27F201E81E796C7600A5156E /* CustomTextField.swift */,
 				27F201EA1E796DC800A5156E /* CustomButton.swift */,
+				2783F15C1E7AF2E300DEAC05 /* Card.swift */,
+				2783F15E1E7AF30000DEAC05 /* Card.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -94,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				279C7CE31E7962EA001C25FE /* LoginVC.swift */,
+				2783F15A1E7AEF0100DEAC05 /* GameVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -190,6 +199,7 @@
 				279C7CEC1E7962EA001C25FE /* LaunchScreen.storyboard in Resources */,
 				279C7CE91E7962EA001C25FE /* Assets.xcassets in Resources */,
 				279C7CE71E7962EA001C25FE /* Main.storyboard in Resources */,
+				2783F15F1E7AF30000DEAC05 /* Card.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,8 +260,10 @@
 			files = (
 				27F201EB1E796DC800A5156E /* CustomButton.swift in Sources */,
 				279C7CE41E7962EA001C25FE /* LoginVC.swift in Sources */,
+				2783F15D1E7AF2E300DEAC05 /* Card.swift in Sources */,
 				279C7CE21E7962EA001C25FE /* AppDelegate.swift in Sources */,
 				27F201EF1E79804700A5156E /* AnimationEngine.swift in Sources */,
+				2783F15B1E7AEF0100DEAC05 /* GameVC.swift in Sources */,
 				27F201E91E796C7600A5156E /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
