@@ -14,8 +14,18 @@ class GameVC: UIViewController {
     @IBOutlet weak var yesBtn: CustomButton!
     @IBOutlet weak var noBtn: CustomButton!
     @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet var timerLbl: UILabel!
+    
+    @IBOutlet var correctLbl: UILabel!
+    @IBOutlet var incorrectLbl: UILabel!
+    
+    var seconds = 0
+    var timer = Timer()
+    var correct = 0
+    var incorrect = 0
     
     var currentCard: Card!
+    var previousCard : Card!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +33,18 @@ class GameVC: UIViewController {
         currentCard = createCardFromNib()
         currentCard.center = AnimationEngine.screenCenterPosition
         
+        if previousCard == nil{
+            previousCard = currentCard
+        }
+        
         self.view.addSubview(currentCard)
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(GameVC.updateTimer), userInfo: nil, repeats: true)
     }
     
     @IBAction func yesPressed(_ sender: Any) {
         if (sender as AnyObject).titleLabel??.text == "YES"{
-            checkAnswer()
+            checkAnswer(check: true)
         } else {
             titleLbl.text = "Does this card match the previous?"
         }
@@ -36,8 +52,31 @@ class GameVC: UIViewController {
         showNextCard()
     }
     @IBAction func noPressed(_ sender: Any) {
-        checkAnswer()
+        checkAnswer(check: false)
         showNextCard()
+    }
+    
+    func updateTimer(){
+        self.seconds += 1
+        self.timerLbl.text = "\(seconds)"
+        
+        //stop the game after 1 minute
+        if self.seconds == 10{
+            stopWatch()
+        }
+    }
+    
+    func stopWatch(){
+        timer.invalidate()
+        seconds = 0
+        self.timerLbl.text = "\(seconds)"
+        
+        self.correctLbl.text = "Correct Answers : \(correct)"
+        self.incorrectLbl.text = "Incorrect Answers : \(incorrect)"
+        
+        currentCard.removeFromSuperview()
+        
+        
     }
     
     func showNextCard(){
@@ -72,7 +111,23 @@ class GameVC: UIViewController {
         return Bundle.main.loadNibNamed("Card", owner: self, options: nil)?[0] as? Card
     }
     
-    func checkAnswer(){
+    func checkAnswer(check: Bool){
         
+        print ("PREVIOUS CARD - \(previousCard.currentShape)")
+        print ("CURRENT CARD - \(currentCard.currentShape)")
+        
+        //se foi premido sim e o cartão é o mesmo , incremente correto
+        if check && previousCard.currentShape == currentCard.currentShape{
+            self.correct += 1
+        } else if check && previousCard.currentShape != currentCard.currentShape{
+            self.incorrect += 1
+        } else if !check && previousCard.currentShape == currentCard.currentShape{
+            self.incorrect += 1
+        } else if !check && previousCard.currentShape != currentCard.currentShape{
+            self.correct += 1
+        }
+        
+        
+        print ("ANSWERS : Correct -> \(correct) Incorrect -> \(incorrect)")
     }
 }
